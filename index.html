@@ -4,31 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Trading Platform</title>
-    <style>
-        body { font-family: Arial, sans-serif; } 
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
-        h1 { text-align: center; }
-        .betting-section { margin-top: 20px; }
-        .deposit-section { margin-top: 40px; text-align: center; }
-        img { max-width: 150px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Color Trading Platform</h1>
-        <div class="betting-section">
-            <h2>Betting Options</h2>
-            <h3>Color Betting</h3>
-            <p>Choose your color and place your bet!</p>
-            <h3>Number Betting (0-9)</h3>
-            <p>Bet on a number and win 9x your betting amount!</p>
-        </div>
-        <div class="deposit-section">
-            <h2>Deposit Funds</h2>
+    </header>
+    
+    <main>
+        <!-- Deposit Section -->
+        <section id="deposit">
+            <h2>Deposit</h2>
             <p>UPI ID: <strong>9119326474@ybl</strong></p>
-            <p>Scan the QR code to deposit:</p>
-            <img src="https://repository-link-to-qr-code.png" alt="QR Code">
-        </div>
-    </div>
+            <div id="qr-code">
+                <img src="path/to/qr-code.png" alt="QR Code for UPI Payment">
+            </div>
+        </section>
+
+        <!-- Color Betting Section -->
+        <section id="color-betting">
+            <h2>Color Betting</h2>
+            <form>
+                <label for="color">Choose a Color:</label>
+                <select id="color" name="color">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <button type="submit">Place Bet</button>
+            </form>
+        </section>
+
+        <!-- Number Betting Section -->
+        <section id="number-betting">
+            <h2>Number Betting (0-9)</h2>
+            <form>
+                <label for="number">Choose a Number:</label>
+                <select id="number" name="number">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <button type="submit">Place Bet</button>
+            </form>
+            <p>Payout: 9x</p>
+        </section>
+
+        <!-- Wallet Management -->
+        <section id="wallet-management">
+            <h2>Wallet Management</h2>
+            <p>Current Balance: <strong>$100</strong></p>
+            <button>Withdraw</button>
+            <button>Deposit</button>
+        </section>
+
+        <!-- Betting History -->
+        <section id="betting-history">
+            <h2>Betting History</h2>
+            <table>
+                <tr>
+                    <th>Bet Type</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Color: Red</td>
+                    <td>$10</td>
+                    <td>Won</td>
+                </tr>
+                <tr>
+                    <td>Number: 3</td>
+                    <td>$5</td>
+                    <td>Lost</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Login/Registration -->
+        <section id="login-registration">
+            <h2>Login / Registration</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#">Register here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Color Trading Platform. All rights reserved.</p>
+    </footer>
 </body>
 </html>
